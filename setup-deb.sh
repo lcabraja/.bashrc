@@ -11,6 +11,10 @@ sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
 sudo apt update && sudo apt install -y 1password 1password-cli
 
+# Tailscale
+# https://tailscale.com/download
+# curl -fsSL https://tailscale.com/install.sh | sh
+
 # Docker
 # https://docs.docker.com/engine/install/ubuntu/
 sudo apt-get update
