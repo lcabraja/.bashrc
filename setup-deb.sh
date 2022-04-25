@@ -13,7 +13,7 @@ sudo apt update && sudo apt install -y 1password 1password-cli
 
 # Tailscale
 # https://tailscale.com/download
-# curl -fsSL https://tailscale.com/install.sh | sh
+curl -fsSL https://tailscale.com/install.sh | sh
 
 # Docker
 # https://docs.docker.com/engine/install/ubuntu/
