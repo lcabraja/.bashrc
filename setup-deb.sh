@@ -17,6 +17,23 @@ sudo apt install -y 1password 1password-cli
 # https://tailscale.com/download
 curl -fsSL https://tailscale.com/install.sh | sh
 
+# ZSH + OhMyZSH + Starship + Nerd Fonts
+# https://ohmyz.sh/#install
+# https://starship.rs/guide/#%F0%9F%9A%80-installation
+sudo apt install -y zsh unzip fontconfig
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -sS https://starship.rs/install.sh | sh
+STARTDIR=$(pwd)
+cd ~/Downloads
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SpaceMono.zip
+unzip -l 
+unzip SpaceMono.zip -d ./SpaceMono
+cd SpaceMono
+rm *Windows*
+mv * ~/.local/share/fonts/
+fc-cache -f -v
+cd $STARTDIR
+
 # Docker
 # https://docs.docker.com/engine/install/ubuntu/
 sudo apt update
